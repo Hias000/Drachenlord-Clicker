@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Drachenlord Clicker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="introScreen">
+  <div id="introText"></div>
+  <button id="startButton" type="button" class="hidden">Spiel starten</button>
+</div>
+
+<!-- GAME -->
+<div id="gameScreen" class="hidden">
+
+<div id="dragonHonor">
+  <h2>DRACHENEHRE</h2>
+
+  <div class="dragonPrestige">
+    <div id="dragonPrestigeLevel">Prestige 0</div>
+    <div id="dragonPrestigeName">Haider</div>
+    <div id="dragonPrestigeBonus">Auto-Bonus: 1.00×</div>
+  </div>
+</div>
+
+<div id="dragonBonuses">
+  <h3>Deine Boni</h3>
+  <ul id="bonusList"></ul>
+</div>
+
+<!-- 👇 NEUER SPIEL-CONTAINER -->
+<div id="gameContainer">
+
+<h1>Pfandflaschen: <span id="count">0</span></h1>
+<p>Pro Klick: <span id="perClick">1</span></p>
+<p>Pfand die Sekunde: <span id="perSecond">0</span></p>
+
+
+  <img src="Mülltonne.jpg" id="trash" alt="Mülltonne">
+<h2 class="upgradeTitle">Upgrades</h2>
+
+
+  <button id="upgradeClick" class="upgradeBtn">
+  Klick verstärken:
+  <span id="clickCount">0</span>
+  (Kosten: <span id="upgradeCost">20</span>)
+</button>
+
+
+    <button id="buyHelper" class="upgradeBtn">
+  Drachenhelfer:
+  <span id="helperCount">0</span>
+  (Kosten: <span id="helperCost">100</span>)
+</button>
+
+
+    <button id="buyMachine" class="upgradeBtn">
+  Pfandmaschine:
+  <span id="machineCount">0</span>
+  (Kosten: <span id="machineCost">800</span>)
+</button>
+
+
+<button id="prestigeBtn" class="hidden prestigeBtn">Pfand abgeben</button>
+
+</div> <!-- 👈 ENDE gameContainer -->
+</div> <!-- 👈 ENDE gameScreen -->
+
+<!-- PRESTIGE -->
+<div id="prestigeOverlay" style="display:none;">
+  <div class="prestigeText">Danke Alda</div>
+</div>
+
+<audio id="music"></audio>
+<audio id="prestigeSound" src="meddl.mp3"></audio>
+
+<!-- DEV TOOLS -->
+<div id="devToolsWrapper" class="hidden">
+
+  <button id="openDevTools">Gamedev Tools</button>
+
+  <div id="devLogin" class="hidden">
+  <div class="devLoginRow">
+  <input
+    type="password"
+    id="devPassword"
+    placeholder="Passwort"
+  >
+</div>
+
+    <button id="submitDevPassword">Eingabe</button>
+    <div id="devError" class="hidden">Falsches Passwort</div>
+  </div>
+
+  <div id="devTools" class="hidden">
+    <button id="devReset">RESET</button>
+    <button id="devCash">+1.000.000</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
